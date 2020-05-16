@@ -10,7 +10,7 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :vitalised, VitalisedWeb.Endpoint,
-  url: [host: "vitalised.netlify.app", port: 4002],
+  url: [host: "vitalised.space", port: 4002],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
