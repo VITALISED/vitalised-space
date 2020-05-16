@@ -1,0 +1,97 @@
+<!-- Get out of me website! -->
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Embeds nicely on Discord -->
+  <meta name="theme-color" content="#805AD5" />
+  <meta content="VITALISED" property="og:title" />
+  <meta content="Pretty good if I do say so myself" property="og:description" />
+
+  <%= csrf_meta_tag() %>
+  <%= live_title_tag "VITALISED" %>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>" />
+  <script defer type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+</head>
+
+<body class="flex flex-col h-full">
+  <header>
+    <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-4" style="background: linear-gradient(90deg, #38A169 0%, #805AD5 100%)">
+      <a class="flex items-center flex-shrink-0 text-white mr-6 pl-4"
+        href="/">
+        <img class="fill-current h-16 w-16 mr-2" src="<%= Routes.static_path(@conn, "/images/logo.png") %>">
+        <span class="font-semibold text-2xl tracking-tight hover:underline">VITALISED</span>
+      </a>
+
+      <button
+        class="text-white inline-flex p-3 hover:bg-purple-300 rounded lg:hidden md:hidden ml-auto hover:text-white outline-none nav-toggler"
+        data-target="#navigation"
+      >
+        <i class="material-icons">menu</i>
+      </button>
+      <div
+        class="hidden top-navbar w-full md:inline-flex md:flex-grow md:w-auto"
+        id="navigation"
+      >
+        <div class="md:inline-flex md:flex-row md:ml-auto md:w-auto w-full md:items-center items-start flex flex-col md:h-auto pr-5">
+          <a
+            href="/"
+            class="md:inline-flex md:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:underline hover:text-white"
+          >
+            <span>Home</span>
+          </a>
+          <a
+            href="/gallery"
+            class="md:inline-flex md:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:underline hover:text-white"
+          >
+            <span>Funny</span>
+          </a>
+
+          <a
+            href="https://www.youtube.com/watch?v=ReYyEqgABNU"
+            class="md:inline-flex md:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:underline hover:text-white"
+          >
+            <span>Gwacopter</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div id="wrapper" class="flex-1 mx-auto">
+    <%= @inner_content %>
+  </div>
+
+  <footer class="flex flex-wrap w-full justify-center border-t border-gray-900 p-2 bottom-0">
+    <a href="https://github.com/VITALISED">
+      <img src="<%= Routes.static_path(@conn, "/images/github.svg") %>" width="29" class="block mx-1">
+    </a>
+    <a href="http://steamcommunity.com/id/vitalmanjame">
+      <img src="<%= Routes.static_path(@conn, "/images/steam.svg") %>" width="29" class="block mx-1">
+    </a>
+  </footer>
+
+
+<!--I'm sorry for using jQuery-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function() {
+  $(".nav-toggler").each(function(_, navToggler) {
+    var target = $(navToggler).data("target");
+    $(navToggler).on("click", function() {
+      $(target).animate({
+        height: "toggle"
+      });
+    });
+  });
+});
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Embeds nicely on Discord -->
+  <meta name="theme-color" content="#805AD5" />
+  <meta content="VITALISED" property="og:title" />
+  <meta content="This page ain't real :(" property="og:description" />
+  <title>VITALISED - 404</title>
+  <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>">
+</head>
+
+<body class="text-center">
+  <div class="py-12">
+    <h1 class="font-semibold text-white text-2xl pb-3">THIS IS A MIROR<br>YOU ARE A TYPO</h1>
+    <p class="text-white">404 nerd, go back <a href="/" class="hover:underline text-teal-300">Home</a>?</p>
+  </div>
+</body>

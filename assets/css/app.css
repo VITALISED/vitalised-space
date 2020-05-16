@@ -1,0 +1,22 @@
+/* Tailwind CSS. */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Import Components */
+@import "./components/progress-bar.css";
+
+/* Dark theme swag */
+body {
+  background-color: #191919;
+}
+
+#card-wrapper {
+  background-color: #1b1b1b;
+}
+
+@media (min-width: 768px) {
+  .top-navbar {
+    display: inline-flex !important;
+  }
+}

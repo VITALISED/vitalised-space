@@ -1,0 +1,9 @@
+@import "../../node_modules/nprogress/nprogress.css";
+
+#nprogress .bar {
+    background: #805AD5 !important;
+}
+
+#nprogress .peg {
+    box-shadow: 0 0 10px #805AD5, 0 0 5px #805AD5 !important;
+}
