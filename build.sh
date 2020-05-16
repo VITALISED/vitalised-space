@@ -7,8 +7,8 @@ mix deps.get --only prod
 MIX_ENV=prod mix compile
 
 # Compile assets
-npm install -g webpack
-npm install -g webpack-cli
+sudo npm install -g webpack
+sudo npm install -g webpack-cli
 cd ./assets
 sudo npm install 
 sudo npm run deploy 
