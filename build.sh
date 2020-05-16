@@ -10,8 +10,8 @@ MIX_ENV=prod mix compile
 npm install -g webpack
 npm install -g webpack-cli
 cd ./assets
-npm install 
-npm run deploy 
+sudo npm install 
+sudo npm run deploy 
 cd ../
 mix phx.digest
 
