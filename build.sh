@@ -7,11 +7,11 @@ mix deps.get --only prod
 MIX_ENV=prod mix compile
 
 # Compile assets
-sudo npm install -g webpack
-sudo npm install -g webpack-cli
+npm install -g webpack
+npm install -g webpack-cli
 cd ./assets
-sudo npm install 
-sudo npm run deploy 
+npm install 
+npm run deploy 
 cd ../
 mix phx.digest
 
