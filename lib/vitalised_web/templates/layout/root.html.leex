@@ -14,7 +14,7 @@
 
   <%= csrf_meta_tag() %>
   <%= live_title_tag "VITALISED" %>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>" />
   <script defer type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
 </head>
@@ -45,13 +45,6 @@
           >
             <span>Home</span>
           </a>
-          <a
-            href="/gallery"
-            class="md:inline-flex md:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:underline hover:text-white"
-          >
-            <span>Funny</span>
-          </a>
-
           <a
             href="https://www.youtube.com/watch?v=ReYyEqgABNU"
             class="md:inline-flex md:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:underline hover:text-white"
